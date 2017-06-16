@@ -1,0 +1,15 @@
+{
+  "name": "start_html",
+  "version": "2.0.0",
+  "authors": [
+    "Just_Jack <silent_control@tut.by>"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "waypoints": "^4.0.0",
+    "normalize-css": "normalize.css#^3.0.3",
+    "matchHeight": "^0.6.0",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0"
+  }
+}

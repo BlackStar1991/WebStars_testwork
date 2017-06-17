@@ -6,37 +6,60 @@
 /* Large Devices, Wide Screens 1280px */
 @media only screen and (max-width: $site) {
 
+  .visible-lg__inline {
+    display: none;
+  }
+  .bl_represent__icon {
+    font-size: 50px;
+  }
+
+  .bl_represent {
+    margin-top: 3.9%;
+  }
 
 }
 
 /* Medium Devices, Desktops 992px */
 @media only screen and (max-width: $tablet-landscape) {
 
-  .bl_fluid{
+  .bl_fluid {
     height: auto;
-    min-height:30px;
+    min-height: 30px;
   }
 
-  .nav_fullNavigation{
+  .nav_fullNavigation {
     margin: 0 auto;
     display: none;
   }
-  .nav_item{
+  .nav_item {
     display: block;
     width: 100%;
-    &:not(:first-child){
+    &:not(:first-child) {
       margin: 0 auto;
     }
-    &__link{
-      width:auto;
+    &__link {
+      width: auto;
       text-align: center;
     }
   }
-  .bl_language{
+  .bl_language {
     margin-left: 0;
   }
-  .bl_search{
+  .bl_search {
     float: left;
+  }
+
+  .bl_represent {
+    margin-top: 38px;
+  }
+
+  .bl_telephones {
+    clear: left;
+    margin-left: 0;
+  }
+
+  .bl_callback {
+    margin-top: 2.4%;
   }
 
 }
@@ -44,6 +67,24 @@
 /* Small Devices, Tablets 768px */
 @media only screen and (max-width: $tablet) {
 
+}
+
+@media only screen and (max-width: 600px) {
+
+
+  .bl_telephones {
+    width: 50%;
+    height: 150px;
+
+    &__item {
+      margin-top: 5%;
+      display: block;
+
+      &:nth-of-type(even) {
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones 480px */
@@ -71,25 +112,46 @@
     animation: none !important;
   }
 
-  .bl_language{
+  .bl_language {
     margin: 2% 0 0;
     float: none;
     text-align: center;
   }
 
-  .bl_search{
+  .bl_search {
     margin: 1% auto;
     float: none;
   }
 
 
+  .bl_telephones{
+    width: 70%;
+  }
 
 
+  .bl_callback {
+    float: left;
+    margin-left: 24px;
+    width: 48px;
+    height: 48px;
+    &__icon {
+      min-width: 100%;
+      background-repeat: no-repeat;
+
+    }
+
+  }
+
+  .invisible-xs__inline {
+    display: none;
+  }
 
 }
 
 /* Custom, iPhone Retina 320px */
 @media only screen and (max-width: $phone) {
+
+
 
 }
 

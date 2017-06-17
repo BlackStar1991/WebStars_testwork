@@ -181,12 +181,12 @@
   }
 
   &__icon{
+    display: inline;
     color: $color_lightOrange;
     line-height: 24px;
   }
   &__text{
-
-    line-height: 24px;
+    display: inline;
     color: #000;
     line-height: 30px;
     text-decoration: underline;
@@ -295,4 +295,14 @@
     line-height: 30px;
   }
 
+}
+
+
+
+
+
+
+.visible-lg__inline,
+.invisible-xs__inline{
+  display: inline;
 }

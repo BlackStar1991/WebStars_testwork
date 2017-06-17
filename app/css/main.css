@@ -838,6 +838,11 @@ body {
   margin: 0 !important;
   overflow: hidden; }
 
+.wrapperBlock {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
 img {
   max-width: 100%;
   height: auto; }
@@ -1019,10 +1024,11 @@ button {
     width: 100%;
     height: 100%; }
   .bl_represent__icon {
+    display: inline;
     color: #ff6313;
     line-height: 24px; }
   .bl_represent__text {
-    line-height: 24px;
+    display: inline;
     color: #000;
     line-height: 30px;
     text-decoration: underline;
@@ -1110,9 +1116,174 @@ button {
     font-size: 20px;
     line-height: 30px; }
 
+.visible-lg__inline,
+.invisible-xs__inline {
+  display: inline; }
+
 /*********************************************/
 /*SECTIONS*/
 /*********************************************/
+.bl_navigation {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  text-transform: uppercase; }
+  .bl_navigation__button {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    padding-left: 87px;
+    padding-right: 52px;
+    border-radius: 4px;
+    background-color: #272933;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all, 0.2s;
+    cursor: pointer; }
+    .bl_navigation__button:hover, .bl_navigation__button:hover:after {
+      transition: all, 0.2s;
+      color: #ff6313; }
+    .bl_navigation__button:before {
+      content: '\f0c9';
+      position: absolute;
+      left: 0;
+      font-family: "FontAwesome";
+      font-size: 24px;
+      color: #fff;
+      width: 58px;
+      height: 40px;
+      border-radius: 4px 0 0 4px;
+      background-color: #ff6313; }
+    .bl_navigation__button:after {
+      position: absolute;
+      content: '\f0d7';
+      font-family: "FontAwesome";
+      font-size: 16px;
+      color: #fff;
+      width: 58px;
+      height: 40px; }
+  .bl_navigation__wrapper {
+    position: relative; }
+  .bl_navigation__fullItems {
+    position: absolute;
+    display: none;
+    width: 292px;
+    z-index: 3; }
+  .bl_navigation__item {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    transition: all, 0.2s; }
+    .bl_navigation__item:hover {
+      transition: all, 0.2s;
+      background-color: #ff6313; }
+  .bl_navigation__link {
+    display: block;
+    width: 100%;
+    border: 1px solid #000; }
+
+.bl_breadcrumb {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px; }
+  .bl_breadcrumb__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 4px;
+    line-height: 42px; }
+    .bl_breadcrumb__item + li:before {
+      margin-right: 4px;
+      content: '\f101';
+      width: 13px;
+      font-family: "FontAwesome";
+      font-size: 13px;
+      color: #676778;
+      text-decoration: none; }
+  .bl_breadcrumb__link {
+    width: 100%;
+    text-decoration: underline;
+    font-family: "Open Sans", sans-serif;
+    color: #676778;
+    font-size: 13px;
+    font-weight: 400; }
+    .bl_breadcrumb__link_active {
+      text-decoration: none !important; }
+
+.product_name {
+  display: block;
+  width: 100%;
+  height: 21px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 17px;
+  text-transform: uppercase; }
+  .product_name:before {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    margin-right: 10px;
+    background-color: #ff6313; }
+
+.product_imgBlock {
+  position: relative;
+  width: 489px;
+  height: 440px;
+  border-radius: 4px;
+  border: 1px solid #d9d9dd;
+  background-color: #fff; }
+
+.product_sale {
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  width: 167px;
+  height: 58px;
+  border-radius: 62px;
+  background-color: #ff3000;
+  z-index: 2; }
+  .product_sale:before {
+    position: absolute;
+    top: 75%;
+    left: 4%;
+    content: "";
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 30px solid #ff3000;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    transform: skewX(14deg); }
+  .product_sale:after {
+    content: '';
+    position: absolute;
+    left: 15%;
+    border: 1px solid #000;
+    width: 80%;
+    height: 20px;
+    background-color: transparent; }
+  .product_sale__text {
+    position: absolute;
+    width: 120px;
+    height: 19px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px; }
+
 /*********************************************/
 /*FOOTER*/
 /*********************************************/
@@ -1132,6 +1303,14 @@ button {
 /*Desktop First Method*/
 /*********************************************/
 /* Large Devices, Wide Screens 1280px */
+@media only screen and (max-width: 80em) {
+  .visible-lg__inline {
+    display: none; }
+  .bl_represent__icon {
+    font-size: 50px; }
+  .bl_represent {
+    margin-top: 3.9%; } }
+
 /* Medium Devices, Desktops 992px */
 @media only screen and (max-width: 62em) {
   .bl_fluid {
@@ -1151,9 +1330,26 @@ button {
   .bl_language {
     margin-left: 0; }
   .bl_search {
-    float: left; } }
+    float: left; }
+  .bl_represent {
+    margin-top: 38px; }
+  .bl_telephones {
+    clear: left;
+    margin-left: 0; }
+  .bl_callback {
+    margin-top: 2.4%; } }
 
 /* Small Devices, Tablets 768px */
+@media only screen and (max-width: 600px) {
+  .bl_telephones {
+    width: 50%;
+    height: 150px; }
+    .bl_telephones__item {
+      margin-top: 5%;
+      display: block; }
+      .bl_telephones__item:nth-of-type(even) {
+        padding-left: 0; } }
+
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 30em) {
   /*Disable Animation on Mobile Devices*/
@@ -1170,7 +1366,19 @@ button {
     text-align: center; }
   .bl_search {
     margin: 1% auto;
-    float: none; } }
+    float: none; }
+  .bl_telephones {
+    width: 70%; }
+  .bl_callback {
+    float: left;
+    margin-left: 24px;
+    width: 48px;
+    height: 48px; }
+    .bl_callback__icon {
+      min-width: 100%;
+      background-repeat: no-repeat; }
+  .invisible-xs__inline {
+    display: none; } }
 
 /* Custom, iPhone Retina 320px */
 /*********************************************/

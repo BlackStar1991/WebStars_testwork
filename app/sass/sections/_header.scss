@@ -1,3 +1,298 @@
-header h1 {
-   color: #f00;
- }
+.bl_fluid{
+  width: 100%;
+  height: 30px;
+  background-color: $color_darkBlue;
+}
+
+// information Button
+.nav_icon{
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin: 2% auto 0;
+  padding-bottom: 1%;
+  border-bottom: 2px solid $color_lightOrange;
+  cursor: pointer;
+  &:hover{
+    transition: all 0.2s;
+    color: $color_lightOrange;
+  }
+
+}
+
+
+.nav_fullNavigation{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+
+.nav_item{
+  position: relative;
+  display: inline-block;
+  &:not(:first-child){
+    margin-left: 2.65%;          ///////////////// 15px
+  }
+  &__link{
+    position: relative;
+    display: block;
+    width: 100%;
+    height:100%;
+    margin: 0 5px;
+    padding:  5px;
+    color: #ffffff;
+    font-family: $Fira;
+    font-size: 14px;
+    font-weight: 400;
+    &:hover{
+      transition: all 0.2s;
+      color: #fff;
+    }
+  }
+  &:hover{
+    transition: all 0.2s;
+    background-color: $color_lightOrange;
+  }
+}
+
+// LANGUAGE
+.bl_language{
+  position: relative;
+  float: right;
+  margin-left: 40px;
+
+  &__delimiter{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #d9d9dd;
+  }
+  &__radio{
+    
+    font-family: $Fira;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #d9d9dd;
+    cursor: pointer;
+    &_active{
+      color: $color_lightOrange;
+    }
+  }
+}
+.radio_button{
+  position: absolute;
+  opacity:0;
+}
+.radio_button:checked + .bl_language__radio{
+  color: $color_lightOrange;
+}
+
+//SEARCH
+
+
+
+.bl_search{
+  float: right;
+  position: relative;
+
+  margin-top: 8px;
+  padding: 0;
+  width: 261px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  &__fild{
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    border-width: 0;
+    outline:none;
+    &::placeholder{
+      padding: 5px 0 4px 10px;
+      color: #d9d9dd;
+      font-family: $Fira;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+  &__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 31px;
+    background-color: $color_lightOrange;
+    &:after{
+      content: "\f002";
+      font-size: 14px;
+      color: #fff;
+      font-family:"FontAwesome";
+    }
+  }
+}
+
+// LOGO
+.bl_logo{
+  float: left;
+  margin-top: 38px;
+  
+  &__link{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &__word{
+
+    font-weight: 700;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 36px;
+    &_second{
+      margin-left: 6px;
+      padding-left: 12px;
+      padding-right: 12px;
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+// REPRESENT
+
+.bl_represent{
+  float: left;
+  //width: 208px;
+  margin-top: 3.45%; //47px
+  margin-left: 4.6%; // 55px;
+  font-size: 15px;
+
+
+  &__link{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon{
+    color: $color_lightOrange;
+    line-height: 24px;
+  }
+  &__text{
+
+    line-height: 24px;
+    color: #000;
+    line-height: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    border-bottom: 1px solid #636363;
+
+  }
+}
+
+.bl_telephones{
+  position: relative;
+  float: left;
+  width: 344px;
+  margin-top: 2.4%;
+  margin-left: 6.3%;
+  font-weight: bold;
+
+
+  &__item{
+    display: inline-block;
+
+    height: 14px;
+    font-size: 19px;
+    line-height: 30px;
+
+    &:nth-of-type(even){
+      padding-left: 48px;
+    }
+
+
+    &:nth-child(1):before{
+      position: relative;
+      top: 2px;
+
+      display: inline-block;
+      content: "";
+
+      margin-right: 10px;
+      @include sprite($kievstar);
+    }
+    &:nth-child(2):before{
+      position: relative;
+      top: 2px;
+
+      display: inline-block;
+
+      content: "\f095";
+      margin-right: 10px;
+      width: 16px;
+      height: 15px;
+      color: #000;
+      font-family: "FontAwesome";
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &:nth-child(3):before{
+      position: relative;
+      top: 2px;
+
+      display: inline-block;
+      content: "";
+      margin-right: 10px;
+      @include sprite($life);
+    }
+    &:nth-child(4):before{
+      position: relative;
+      top: 2px;
+
+      display: inline-block;
+      content: "";
+      margin-right: 10px;
+      @include sprite($vodafon);
+    }
+
+
+
+  }
+
+
+}
+
+
+.bl_callback{
+  float: right;
+  margin-top: 30px;
+  width: 220px;
+  height: 47px;
+  border-radius: 4px;
+  background-color: $color_lightOrange;
+  &__icon{
+    display: inline-block;
+    margin-left: 14px;
+    margin-top: 12px;
+    background: transparent;
+    @include sprite($callback);
+  }
+
+
+  &__text{
+
+    width: 161px;
+    height: 19px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+}

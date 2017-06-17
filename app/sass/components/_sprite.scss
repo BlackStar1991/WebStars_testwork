@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$callback-name: 'callback';
+$callback-x: 79px;
+$callback-y: 0px;
+$callback-offset-x: -79px;
+$callback-offset-y: 0px;
+$callback-width: 18px;
+$callback-height: 19px;
+$callback-total-width: 97px;
+$callback-total-height: 79px;
+$callback-image: '../img/sprite.png';
+$callback: (79px, 0px, -79px, 0px, 18px, 19px, 97px, 79px, '../img/sprite.png', 'callback', );
+$car-name: 'car';
+$car-x: 0px;
+$car-y: 0px;
+$car-offset-x: 0px;
+$car-offset-y: 0px;
+$car-width: 47px;
+$car-height: 33px;
+$car-total-width: 97px;
+$car-total-height: 79px;
+$car-image: '../img/sprite.png';
+$car: (0px, 0px, 0px, 0px, 47px, 33px, 97px, 79px, '../img/sprite.png', 'car', );
+$kievstar-name: 'kievstar';
+$kievstar-x: 25px;
+$kievstar-y: 38px;
+$kievstar-offset-x: -25px;
+$kievstar-offset-y: -38px;
+$kievstar-width: 20px;
+$kievstar-height: 18px;
+$kievstar-total-width: 97px;
+$kievstar-total-height: 79px;
+$kievstar-image: '../img/sprite.png';
+$kievstar: (25px, 38px, -25px, -38px, 20px, 18px, 97px, 79px, '../img/sprite.png', 'kievstar', );
+$kievstar-min-name: 'kievstar_min';
+$kievstar-min-x: 79px;
+$kievstar-min-y: 24px;
+$kievstar-min-offset-x: -79px;
+$kievstar-min-offset-y: -24px;
+$kievstar-min-width: 18px;
+$kievstar-min-height: 16px;
+$kievstar-min-total-width: 97px;
+$kievstar-min-total-height: 79px;
+$kievstar-min-image: '../img/sprite.png';
+$kievstar-min: (79px, 24px, -79px, -24px, 18px, 16px, 97px, 79px, '../img/sprite.png', 'kievstar_min', );
+$life-name: 'life';
+$life-x: 0px;
+$life-y: 38px;
+$life-offset-x: 0px;
+$life-offset-y: -38px;
+$life-width: 20px;
+$life-height: 20px;
+$life-total-width: 97px;
+$life-total-height: 79px;
+$life-image: '../img/sprite.png';
+$life: (0px, 38px, 0px, -38px, 20px, 20px, 97px, 79px, '../img/sprite.png', 'life', );
+$life-min-name: 'life_min';
+$life-min-x: 0px;
+$life-min-y: 63px;
+$life-min-offset-x: 0px;
+$life-min-offset-y: -63px;
+$life-min-width: 16px;
+$life-min-height: 16px;
+$life-min-total-width: 97px;
+$life-min-total-height: 79px;
+$life-min-image: '../img/sprite.png';
+$life-min: (0px, 63px, 0px, -63px, 16px, 16px, 97px, 79px, '../img/sprite.png', 'life_min', );
+$vodafon-name: 'vodafon';
+$vodafon-x: 50px;
+$vodafon-y: 38px;
+$vodafon-offset-x: -50px;
+$vodafon-offset-y: -38px;
+$vodafon-width: 19px;
+$vodafon-height: 18px;
+$vodafon-total-width: 97px;
+$vodafon-total-height: 79px;
+$vodafon-image: '../img/sprite.png';
+$vodafon: (50px, 38px, -50px, -38px, 19px, 18px, 97px, 79px, '../img/sprite.png', 'vodafon', );
+$vodafon-min-name: 'vodafon_min';
+$vodafon-min-x: 52px;
+$vodafon-min-y: 0px;
+$vodafon-min-offset-x: -52px;
+$vodafon-min-offset-y: 0px;
+$vodafon-min-width: 22px;
+$vodafon-min-height: 21px;
+$vodafon-min-total-width: 97px;
+$vodafon-min-total-height: 79px;
+$vodafon-min-image: '../img/sprite.png';
+$vodafon-min: (52px, 0px, -52px, 0px, 22px, 21px, 97px, 79px, '../img/sprite.png', 'vodafon_min', );
+$spritesheet-width: 97px;
+$spritesheet-height: 79px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($callback, $car, $kievstar, $kievstar-min, $life, $life-min, $vodafon, $vodafon-min, );
+$spritesheet: (97px, 79px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

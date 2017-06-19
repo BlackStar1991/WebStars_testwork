@@ -17,6 +17,34 @@
     margin-top: 3.9%;
   }
 
+
+  .product_imgBlock.col-lg-5{
+    //padding-left: 0!important;
+
+  }
+
+  .product_info{
+    &__powerPrice__active{
+      border: 1px solid $color_lightOrange;
+    }
+
+    &__model{
+      margin-top: 15%;
+    }
+
+  }
+
+  .buy_button{
+    margin-top: 30%;
+  }
+  .buy_servises{
+    margin-top: 25px;
+  }
+
+
+  .product_imgBlock__mainImage{
+
+  }
 }
 
 /* Medium Devices, Desktops 992px */
@@ -85,6 +113,15 @@
       }
     }
   }
+
+  .buy_servises{
+    margin-top: 44%;
+  }
+  .buy_delivery{
+    margin-top: 12px;
+    margin-left: 2px;
+  }
+
 }
 
 /* Extra Small Devices, Phones 480px */
@@ -135,6 +172,8 @@
     width: 48px;
     height: 48px;
     &__icon {
+      margin-left: 14px;
+      margin-top: 6px;
       min-width: 100%;
       background-repeat: no-repeat;
 
